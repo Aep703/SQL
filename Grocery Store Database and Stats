@@ -1,0 +1,18 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, category TEXT, rating INTEGER);
+
+INSERT INTO store VALUES (1, "apple", "produce", 5);
+INSERT INTO store Values (2, "toilet paper","hyegiene",5);
+INSERT INTO store VALUES (3, "napkin", "hygiene", 4);
+INSERT INTO store VALUES (4, "beans", "vegtable",2 );
+INSERT INTO store VALUES (5, "ground beef", "meat", 4);
+INSERT INTO store VALUES (6, "ketchup", "condiment", 2);
+INSERT INTO store VALUES (7, "hummus", "condiment", 1);
+INSERT INTO store VALUES (8, "papaya", "produce", 2);
+INSERT INTO store VALUES (9, "chicken breast", "meat", 4);
+INSERT INTO store VALUES (10, "pizza", "frozen", 1);
+INSERT INTO store VALUES (11, "smoothie berries", "frozen", 3);
+INSERT INTO store VALUES (12, "granola", "snack", 5);
+
+--Display the database ordered by rating
+SELECT * FROM store ORDER BY rating;
+
