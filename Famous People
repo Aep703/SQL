@@ -1,0 +1,43 @@
+/* Create table about the people and what they do here */
+CREATE TABLE singers (id INTEGER PRIMARY KEY AUTOINCREMENT, singer_name TEXT, song_name TEXT, home_state TEXT);
+
+INSERT INTO singers (singer_name, song_name, home_state) VALUES ("Ariana Grande", "7 Rings","Flordia");
+
+INSERT INTO singers (singer_name, song_name, home_state) VALUES ("Michael Jackson","Thriller","Indiana");
+
+INSERT INTO singers (singer_name, song_name, home_state) VALUES ("Taylor Swift","Blank Space","Pennsylvania");
+
+INSERT INTO singers (singer_name, song_name, home_state) VALUES ("Eminem","Lose Yourself","Missouri");
+
+INSERT INTO singers (singer_name, song_name, home_state) VALUES ("Lady Gaga","Bad Romance","New York");
+
+INSERT INTO singers (singer_name, song_name, home_state) VALUES ("JLo","Love don't cost a thing","New York");
+
+
+CREATE TABLE partners (name TEXT, partner_name TEXT, years_together INTEGER, partner_occupation TEXT);
+
+INSERT INTO partners (name, partner_name, years_together, partner_occupation) VALUES ("Ariana Grane","Dalton Gomez", 2, "real estate agent");
+INSERT INTO partners (name, partner_name, years_together, partner_occupation) VALUES ("Michael Jackson","Deborah Jeanne Rowe", 2,"dermatology assistant");
+INSERT INTO partners (name, partner_name, years_together, partner_occupation) VALUES ("Taylor Swift", "Joe Alwyn", 5, "actor");
+INSERT INTO partners (name, partner_name, years_together, partner_occupation) VALUES ("Eminem","Kim Scott",2, "author");
+INSERT INTO partners (name, partner_name, years_together, partner_occupation) VALUES ("Lady Gaga","Christian Carino", 2,"talent agent");
+INSERT INTO partners (name, partner_name, years_together, partner_occupation) VALUES ("JLo", "Ben Affleck",1,"actor");
+
+
+/*who each singer is married to*/
+
+SELECT s.singer_name,p.partner_name,p.years_together FROM singers as s
+JOIN partners as p
+ON s.singer_name=p.name;
+
+
+/*Where each singer is from*/
+
+SELECT singer_name,home_state, song_name FROM singers;
+
+
+/*What does the singer's partners do for a living*/
+
+SELECT s.singer_name,p.partner_name, p.partner_occupation FROM singers as s
+JOIN partners as p
+ON s.singer_name=p.name;
